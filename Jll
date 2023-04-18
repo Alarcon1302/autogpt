@@ -1,0 +1,15 @@
+
+pip install git+https://github.com/agemagician/AutoGPT.git
+
+from autogpt import GPT
+
+gpt = GPT(engine="gpt2")
+
+# Define la cadena de entrada para generar texto
+prompt = "Mi nombre es ChatGPT y me gusta mucho hablar con la gente."
+
+# Genera el texto a partir de la cadena de entrada
+output = gpt.predict(prompt=prompt, max_length=50, temperature=0.5)
+
+# Imprime el texto generado
+print(output)
